@@ -12,7 +12,7 @@ with open(csv_file, newline='', encoding='utf-8') as file:
 # Base command for yt-dlp
 base_command = 'yt-dlp -P "./MyVideos" -o "%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s"'
 base_command = base_command + ' -f "(bv*+ba/b)[protocol^=http][protocol!*=dash] / (bv*+ba/b)"'
-#base_command = base_command + ' --split-chapters'
+base_command = base_command + ' --split-chapters'
 base_command = base_command + ' --ffmpeg-location "./ffmpeg"'
 #base_command = base_command + ' --cookies-from-browser chrome --cookies "./cookies.txt"'
 base_command = base_command + '--cookies-from-browser Edge  --cookies "./cookies.txt"'
