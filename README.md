@@ -1,3 +1,23 @@
+USE:
+1. Install `ffmpeg`
+2. Run yt-dlp "https://www.youtube.com/watch?v=ZxhV87JMI6I" -f "(bv*+ba/b)[protocol^=http][protocol!*=dash] / (bv
+*+ba/b)"
+3. Sample: https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#output-template-examples
+4. Get Cookie:  https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc based on https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp
+5. This issue affects Windows versions of Chrome and some other chromium-based browsers such as Edge.
+
+Possible workarounds are:
+
+Try after closing chrome completely OR
+
+Launch chrome.exe with the flag:
+--disable-features=LockProfileCookieDatabase
+
+For convenience, you can add it your desktop shortcut for Chrome. Right-click the shortcut, go into Properties, and change the executable path, e.g.:
+"C:\Program Files\Chrome\chrome.exe" --disable-features=LockProfileCookieDatabase
+
+Alternatively, you can install the ChomeCookieUnlock yt-dlp plugin
+
 [![Build Status](https://github.com/ytdl-org/youtube-dl/workflows/CI/badge.svg)](https://github.com/ytdl-org/youtube-dl/actions?query=workflow%3ACI)
 
 
